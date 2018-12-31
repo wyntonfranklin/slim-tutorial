@@ -3,5 +3,5 @@
 !/logs/README.md
 .idea/
 cache/
-/public/vendor
+!public/vendor/
 img/
