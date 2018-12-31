@@ -9,6 +9,7 @@
 class ToDo
 {
 
+    private $id;
     private $task;
     private $details;
     private $date;
@@ -26,6 +27,15 @@ class ToDo
         $this->author = $author;
         $this->date = date("Y-m-d");
         $this->time = date("h:i:s");
+    }
+
+    public function create($row)
+    {
+        $this->task = $row["name"];
+        $this->details = $row["details"];
+        $this->author = $row["author"];
+        $this->id = $row["task_id"];
+        return $this;
     }
 
     /**
@@ -124,9 +134,28 @@ class ToDo
         $this->status = $status;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
 
-    public function getName(){
+
+
+
+    public function getName()
+    {
         return "My first Tod";
     }
 

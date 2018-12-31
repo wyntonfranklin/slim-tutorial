@@ -26,6 +26,9 @@ require __DIR__ . '/../src/middleware.php';
 // Register routes
 require __DIR__ . '/../src/routes.php';
 
+// Access Control
+require __DIR__ . '/../src/Acl.php';
+
 // Register Classes
 require __DIR__ . '/../src/classes/ToDo.php';
 

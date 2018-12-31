@@ -41,10 +41,19 @@ $app->get('/', \ToDoController::class . ':home');
 
 $app->get('/login', \ToDoController::class . ':login');
 
+$app->post('/authenticateUser', \ToDoController::class . ':authenticateUser');
+
 $app->get('/create', \ToDoController::class . ':create');
+
+$app->get('/view/{id}', \ToDoController::class . ':view');
 
 $app->get('/edit/{id}', \ToDoController::class . ':edit');
 
+$app->post('/update/{id}', \ToDoController::class . ':update');
+
 $app->post('/add', \ToDoController::class . ':add');
 
+$app->post('/quickAdd', \ToDoController::class . ':quickAdd');
+
+$app->post('/delete', \ToDoController::class . ':delete');
 

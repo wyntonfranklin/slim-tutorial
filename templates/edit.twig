@@ -2,7 +2,7 @@
 
 <header class="bg-primary text-white">
     <div class="container text-center">
-        <h1>Edit Task</h1>
+        <h1>{{ todo.task }}</h1>
     </div>
 </header>
 
@@ -12,18 +12,23 @@
             <div class="col-lg-8 mx-auto">
                 <h2>Edit Task</h2>
                 <br>
-                <form>
+                {% if successMessage is not empty %}
+                <div class="alert alert-success" role="alert">
+                    {{ successMessage }}
+                </div>
+                {% endif %}
+                <form method="post" action="/update/{{ todo.id }}">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Task</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Task">
+                        <input name="task" value="{{ todo.task }}" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Task">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Details</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Details">
+                        <input name="details" value="{{ todo.details }}" type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Details">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Author</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Author">
+                        <input name="author" value="{{ todo.author }}" type="text" class="form-control" id="exampleInputPassword1" placeholder="Author">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
