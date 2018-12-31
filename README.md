@@ -1,27 +1,48 @@
-# Slim Framework 3 Skeleton Application
+# Slim Tutorial
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the PHP-View template renderer. It also uses the Monolog logger.
+This is a simple todo application made using the Slim framework.  Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs.
 
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
+You can learn more about slim here - https://www.slimframework.com/
+
+You see the walk-through here - https://wftutorials.wordpress.com/. It outlines how I went about building this application.
+
+This tutorial was built from the slim-skeleton application and was built for Composer. This makes setting up a new Slim Framework application quick and easy.
+
+### Preview
+
+![https://wftutorials.files.wordpress.com/2018/12/slim_tutorial_screenshot_1.png](https://wftutorials.files.wordpress.com/2018/12/slim_tutorial_screenshot_1.png)
 
 ## Install the Application
 
-Run this command from the directory in which you want to install your new Slim Framework application.
+Clone  or Download the application to your desktop.
 
-    php composer.phar create-project slim/slim-skeleton [my-app-name]
+`git clone https://github.com/wyntonfranklin/slim-tutorial.git`
 
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
+Run this command from the directory in which you want to install the tutorial. This will download all the composer dependencies.
+
+    php composer.phar install
+
+You'll want to:
 
 * Point your virtual host document root to your new application's `public/` directory.
-* Ensure `logs/` is web writeable.
+* Ensure `logs/` is web writable.
 
-To run the application in development, you can run these commands 
+## Features
 
-	cd [my-app-name]
-	php composer.phar start
+- Create a new task
+- Edit a task
+- Delete a task
+- View a task
+- View all task
+- Create a quick task via ajax
+- Delete a task via ajax
+- Create views using twig
+- Create routes using controllers
+- Using the slim dependency container
+- Using a database
+- Login  and Authentication  - Pending
 
-Run this command in the application directory to run the test suite
 
-	php composer.phar test
 
-That's it! Now go build something cool.
+
+
