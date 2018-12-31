@@ -1,0 +1,34 @@
+{{ include("header.twig") }}
+
+<header class="bg-primary text-white">
+    <div class="container text-center">
+        <h1>Welcome to a Slim Tutorial</h1>
+        <input style="width:60%; padding:5px;" type="text" placeholder="Add ToDo Item"/>
+        <button class="btn btn-dark">Save</button>
+    </div>
+</header>
+
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Tasks</h2>
+                <br>
+                <ul class="list-group">
+                    {% for todo in todos %}
+                    <li class="list-group-item">
+                        <span>{{ todo.task }}</span>
+                        <span class="float-right">
+                           <a href="/edit/1"><i class="fa fa-edit fa-fw"></i></a>&nbsp;&nbsp;
+                            <i class="fa fa-trash fa-fw"></i>
+                        </span>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ include("footer.twig") }}
