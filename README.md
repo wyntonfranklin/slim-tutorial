@@ -44,5 +44,7 @@ You'll want to:
 
 
 
+## Resources
 
+Bootstrap Template - https://github.com/BlackrockDigital/startbootstrap-scrolling-nav
 
